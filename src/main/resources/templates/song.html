@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html xmlns:th="http://www.thymeleaf.org"></html>
+    <th:block th:replace="~{fragments :: title(song)}"></th:block>
+</head>
+<body>
+    
+    <ul>
+        <li th:each="song : ${songs}" th:text="${song.titolo}"></li>
+    </ul>
+</body>
+</html>
