@@ -58,4 +58,28 @@
 
 li{
     list-style: none;
+    display: grid;
+    
+}
+
+.list-container{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.lista{
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+.detail-container{
+    width: 500px;
+    margin: 0 auto;  
+}
+
+.title-border{
+    padding: 100px;
+    border: 2px solid black;
 }

@@ -18,16 +18,17 @@
             <hr class="vertical-line" />
 
             <div class="padd-left">
-                <a th:replace="~{fragments :: a(@{http://localhost:8080/movie}, film)}" />
+                <a th:replace="~{fragments :: a(@{http://localhost:8080/}, Home)}" />
                 <a th:replace="~{fragments :: a(@{http://localhost:8080/song}, canzoni)}" />
             </div>
         </header>
 
+
         <main>
-            <h2 class="text-center padd">Best Movies</h2>
-            <ul class="text-center">
+            <h2 class="text-center padd">Best Movie</h2>
+            <ul class="text-center list-container">
                 <li th:each=" movie : ${movies}" >
-                    <a th:href="@{'http://localhost:8080/movie/' + ${movie.id}}" th:text="${movie.titolo}"></a>
+                    <a class="lista" th:href="@{'http://localhost:8080/movie/' + ${movie.id}}" th:text="${movie.titolo}"></a>
                 </li>
             </ul>
         </main>

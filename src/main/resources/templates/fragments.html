@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <html xmlns:th="http://www.thymeleaf.org"></html>
+    <html xmlns:th="http://www.thymeleaf.org">
+
+    </html>
     <!-- style -->
     <th:block th:fragment="styles">
         <link rel="stylesheet" th:href="@{/css/style.css}">
     </th:block>
-     
+
 </head>
+
 <body>
     <!-- navigation button -->
     <a class="nav-button" th:fragment="a(link, pageName)" th:href="${link}" th:text="${pageName}"></a>
@@ -15,8 +19,26 @@
     <!-- titolo detail -->
     <h2 th:fragment="h2(titolo) " th:text="|titolo : ${titolo}|"></h2>
 
+    <!-- lista -->
+    <!-- <main th:fragment="list(page)">
+        <h2 class="text-center padd" th:text="|Best ${page}|">Best Song</h2>
+        <ul class="text-center list-container">
+            <th:block th:if="${page.equals(song)}">
+                <li th:each=" song : ${songs}">
+                    <a class="lista" th:href="@{'http://localhost:8080/song/' + ${song.id}}"
+                        th:text="${song.titolo}"></a>
+                </li>
+            </th:block>
+            <th:block th:if="${page.equals(movie)}">
+                <li th:each=" movie : ${movies}">
+                    <a class="lista" th:href="@{'http://localhost:8080/song/' + ${movie.id}}"
+                        th:text="${movie.titolo}"></a>
+                </li>
+            </th:block>
 
-    
+        </ul>
+    </main> -->
 
 </body>
+
 </html>
