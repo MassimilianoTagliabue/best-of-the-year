@@ -2,11 +2,11 @@ package org.lessons.java.spring.best_of_the_year.classes;
 
 import java.io.Serializable;
 
+
 public class Movie implements Serializable {
 
     private int id;
     private String titolo;
-
 
     public Movie() {
     };
@@ -31,5 +31,8 @@ public class Movie implements Serializable {
     public String getTitolo() {
         return titolo;
     }
+
+    
+
 
 }

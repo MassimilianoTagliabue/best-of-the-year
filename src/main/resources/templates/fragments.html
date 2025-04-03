@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <html xmlns:th="http://www.thymeleaf.org"></html>
-    <title th:fragment="title(pageTitle)" th:text="${pageTitle}"/>
+    <!-- style -->
+    <th:block th:fragment="styles">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </th:block>
+     
 </head>
 <body>
+    <!-- navigation button -->
+    <a class="nav-button" th:fragment="a(link, pageName)" th:href="${link}" th:text="${pageName}"></a>
+
+    <!-- titolo detail -->
+    <h2 th:fragment="h2(titolo) " th:text="|titolo : ${titolo}|"></h2>
+
+
     
+
 </body>
 </html>

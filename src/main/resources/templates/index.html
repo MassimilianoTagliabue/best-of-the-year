@@ -2,10 +2,28 @@
 <html lang="en">
 <head>
     <html xmlns:th="http://www.thymeleaf.org"></html>
-    <th:block th:replace="~{fragments :: title(homepage)}"></th:block>
+    <title>home</title>
+    <th:block th:insert="~{fragments :: styles}"></th:block>
 </head>
 <body>
-    
-    <h2 th:text="|Best of the year ${nome}"/>
+
+
+    <div class="container">
+        <header class="navbar flex">
+            <h3 class="title-best">Best of</h3>
+            <hr class="vertical-line" />
+
+            <div class="padd-left">
+                <a th:replace="~{fragments :: a(@{http://localhost:8080/movie}, film)}" />
+                <a th:replace="~{fragments :: a(@{http://localhost:8080/song}, canzoni)}" />
+            </div>
+        </header>
+
+        <main>
+            <h2 class="text-center padd">Best Of</h2>
+            
+        </main>
+
+    </div>
 </body>
 </html>

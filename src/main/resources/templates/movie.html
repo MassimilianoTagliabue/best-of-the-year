@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <html xmlns:th="http://www.thymeleaf.org"></html>
-    <th:block th:replace="~{fragments :: title(movie)}"></th:block>
+    <html xmlns:th="http://www.thymeleaf.org">
+
+    </html>
+    <title>movies</title>
+    <!-- style -->
+    <th:block th:insert="~{fragments :: styles}"></th:block>
 </head>
+
 <body>
-    
-    <ul>
-        <li  th:each=" movie : ${movies}" th:text="${movie.titolo}"></li>
-    </ul>
+
+    <div class="container">
+        <header class="navbar flex">
+            <h3 class="title-best">Best of</h3>
+            <hr class="vertical-line" />
+
+            <div class="padd-left">
+                <a th:replace="~{fragments :: a(@{http://localhost:8080/movie}, film)}" />
+                <a th:replace="~{fragments :: a(@{http://localhost:8080/song}, canzoni)}" />
+            </div>
+        </header>
+
+        <main>
+            <h2 class="text-center padd">Best Movies</h2>
+            <ul class="text-center">
+                <li th:each=" movie : ${movies}" >
+                    <a th:href="@{'http://localhost:8080/movie/' + ${movie.id}}" th:text="${movie.titolo}"></a>
+                </li>
+            </ul>
+        </main>
+
+    </div>
+
 </body>
+
 </html>
